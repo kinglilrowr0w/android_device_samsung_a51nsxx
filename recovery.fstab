@@ -3,14 +3,14 @@
 #product         /product        ext4            ro,errors=panic         wait,avb,logical,first_stage_mount
 #odm             /odm            ext4            ro,errors=panic         wait,avb,logical,first_stage_mount
 
-/system_root    ext4    /dev/block/platform/13520000.ufs/by-name/system 	flags=display="System";backup=0
-/system_image   emmc    /dev/block/platform/13520000.ufs/by-name/system 	flags=backup=1;flashimg
-/vendor		ext4	/dev/block/platform/13520000.ufs/by-name/vendor 	flags=backup=0
-/vendor_image	emmc	/dev/block/platform/13520000.ufs/by-name/vendor		flags=backup=1;flashimg
-/product	ext4	/dev/block/platform/13520000.ufs/by-name/product 	flags=backup=1;display="Product"
-/product_image	emmc	/dev/block/platform/13520000.ufs/by-name/product 	flags=backup=1;flashimg;display="Product Image (CSC)"
-/odm		ext4	/dev/block/platform/13520000.ufs/by-name/odm 		flags=backup=0
-/odm_image	emmc	/dev/block/platform/13520000.ufs/by-name/odm		flags=backup=1;flashimg
+/system_root    ext4    /dev/block/dm-4                                         flags=display="System";backup=0
+/system_image   emmc    /dev/block/dm-4                                         flags=backup=1;flashimg
+/vendor		ext4	/dev/block/dm-5                                         flags=backup=0
+/vendor_image	emmc	/dev/block/dm-5                                         flags=backup=1;flashimg
+/product	ext4	/dev/block/dm-6                                         flags=backup=1;display="Product"
+/product_image	emmc	/dev/block/dm-6                                         flags=backup=1;flashimg;display="Product Image (CSC)"
+/odm		ext4	/dev/block/dm-7                                         flags=backup=0
+/odm_image	emmc	/dev/block/dm-7                                         flags=backup=1;flashimg
 
 /modem		emmc	/dev/block/platform/13520000.ufs/by-name/radio		flags=backup=1;display="Modem Firmware"
 /boot           emmc    /dev/block/platform/13520000.ufs/by-name/boot
